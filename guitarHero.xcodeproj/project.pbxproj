@@ -13,6 +13,9 @@
 		67B8177C14FDA2ED00ECAA6B /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 67B8177A14FDA2ED00ECAA6B /* Credits.rtf */; };
 		67B8177F14FDA2ED00ECAA6B /* guitarHeroAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B8177E14FDA2ED00ECAA6B /* guitarHeroAppDelegate.m */; };
 		67B8178214FDA2ED00ECAA6B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67B8178014FDA2ED00ECAA6B /* MainMenu.xib */; };
+		67B8178A14FDBD3E00ECAA6B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B8178914FDBD3E00ECAA6B /* AudioToolbox.framework */; };
+		67B8178C14FDBD8100ECAA6B /* soundCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B8178B14FDBD8100ECAA6B /* soundCallback.m */; };
+		67B8178F14FDBDFF00ECAA6B /* guitarSoundObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B8178E14FDBDFF00ECAA6B /* guitarSoundObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,14 +24,19 @@
 		67B8176E14FDA2ED00ECAA6B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		67B8176F14FDA2ED00ECAA6B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		67B8177014FDA2ED00ECAA6B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		67B8177314FDA2ED00ECAA6B /* guitarHero-Info.plist */ = {isa = PBXFileReference; path = "guitarHero-Info.plist"; sourceTree = "<group>"; };
+		67B8177314FDA2ED00ECAA6B /* guitarHero-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "guitarHero-Info.plist"; sourceTree = "<group>"; };
 		67B8177514FDA2ED00ECAA6B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		67B8177714FDA2ED00ECAA6B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		67B8177914FDA2ED00ECAA6B /* guitarHero-Prefix.pch */ = {isa = PBXFileReference; path = "guitarHero-Prefix.pch"; sourceTree = "<group>"; };
+		67B8177914FDA2ED00ECAA6B /* guitarHero-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "guitarHero-Prefix.pch"; sourceTree = "<group>"; };
 		67B8177B14FDA2ED00ECAA6B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		67B8177D14FDA2ED00ECAA6B /* guitarHeroAppDelegate.h */ = {isa = PBXFileReference; path = guitarHeroAppDelegate.h; sourceTree = "<group>"; };
+		67B8177D14FDA2ED00ECAA6B /* guitarHeroAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = guitarHeroAppDelegate.h; sourceTree = "<group>"; };
 		67B8177E14FDA2ED00ECAA6B /* guitarHeroAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = guitarHeroAppDelegate.m; sourceTree = "<group>"; };
 		67B8178114FDA2ED00ECAA6B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		67B8178814FDBCFD00ECAA6B /* soundCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = soundCallback.h; sourceTree = "<group>"; };
+		67B8178914FDBD3E00ECAA6B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		67B8178B14FDBD8100ECAA6B /* soundCallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = soundCallback.m; sourceTree = "<group>"; };
+		67B8178D14FDBDFF00ECAA6B /* guitarSoundObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = guitarSoundObject.h; sourceTree = "<group>"; };
+		67B8178E14FDBDFF00ECAA6B /* guitarSoundObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = guitarSoundObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67B8178A14FDBD3E00ECAA6B /* AudioToolbox.framework in Frameworks */,
 				67B8176C14FDA2ED00ECAA6B /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -46,6 +55,7 @@
 		67B8175C14FDA2ED00ECAA6B = {
 			isa = PBXGroup;
 			children = (
+				67B8178914FDBD3E00ECAA6B /* AudioToolbox.framework */,
 				67B8177114FDA2ED00ECAA6B /* guitarHero */,
 				67B8176A14FDA2ED00ECAA6B /* Frameworks */,
 				67B8176814FDA2ED00ECAA6B /* Products */,
@@ -86,6 +96,8 @@
 				67B8177E14FDA2ED00ECAA6B /* guitarHeroAppDelegate.m */,
 				67B8178014FDA2ED00ECAA6B /* MainMenu.xib */,
 				67B8177214FDA2ED00ECAA6B /* Supporting Files */,
+				67B8178D14FDBDFF00ECAA6B /* guitarSoundObject.h */,
+				67B8178E14FDBDFF00ECAA6B /* guitarSoundObject.m */,
 			);
 			path = guitarHero;
 			sourceTree = "<group>";
@@ -93,6 +105,8 @@
 		67B8177214FDA2ED00ECAA6B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				67B8178814FDBCFD00ECAA6B /* soundCallback.h */,
+				67B8178B14FDBD8100ECAA6B /* soundCallback.m */,
 				67B8177314FDA2ED00ECAA6B /* guitarHero-Info.plist */,
 				67B8177414FDA2ED00ECAA6B /* InfoPlist.strings */,
 				67B8177714FDA2ED00ECAA6B /* main.m */,
@@ -164,6 +178,8 @@
 			files = (
 				67B8177814FDA2ED00ECAA6B /* main.m in Sources */,
 				67B8177F14FDA2ED00ECAA6B /* guitarHeroAppDelegate.m in Sources */,
+				67B8178C14FDBD8100ECAA6B /* soundCallback.m in Sources */,
+				67B8178F14FDBDFF00ECAA6B /* guitarSoundObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
