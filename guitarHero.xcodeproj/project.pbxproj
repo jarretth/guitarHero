@@ -1,0 +1,290 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		67B8176C14FDA2ED00ECAA6B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B8176B14FDA2ED00ECAA6B /* Cocoa.framework */; };
+		67B8177614FDA2ED00ECAA6B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 67B8177414FDA2ED00ECAA6B /* InfoPlist.strings */; };
+		67B8177814FDA2ED00ECAA6B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B8177714FDA2ED00ECAA6B /* main.m */; };
+		67B8177C14FDA2ED00ECAA6B /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 67B8177A14FDA2ED00ECAA6B /* Credits.rtf */; };
+		67B8177F14FDA2ED00ECAA6B /* guitarHeroAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B8177E14FDA2ED00ECAA6B /* guitarHeroAppDelegate.m */; };
+		67B8178214FDA2ED00ECAA6B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67B8178014FDA2ED00ECAA6B /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		67B8176714FDA2ED00ECAA6B /* guitarHero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = guitarHero.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		67B8176B14FDA2ED00ECAA6B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		67B8176E14FDA2ED00ECAA6B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		67B8176F14FDA2ED00ECAA6B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		67B8177014FDA2ED00ECAA6B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		67B8177314FDA2ED00ECAA6B /* guitarHero-Info.plist */ = {isa = PBXFileReference; path = "guitarHero-Info.plist"; sourceTree = "<group>"; };
+		67B8177514FDA2ED00ECAA6B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		67B8177714FDA2ED00ECAA6B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		67B8177914FDA2ED00ECAA6B /* guitarHero-Prefix.pch */ = {isa = PBXFileReference; path = "guitarHero-Prefix.pch"; sourceTree = "<group>"; };
+		67B8177B14FDA2ED00ECAA6B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		67B8177D14FDA2ED00ECAA6B /* guitarHeroAppDelegate.h */ = {isa = PBXFileReference; path = guitarHeroAppDelegate.h; sourceTree = "<group>"; };
+		67B8177E14FDA2ED00ECAA6B /* guitarHeroAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = guitarHeroAppDelegate.m; sourceTree = "<group>"; };
+		67B8178114FDA2ED00ECAA6B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		67B8176414FDA2ED00ECAA6B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67B8176C14FDA2ED00ECAA6B /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		67B8175C14FDA2ED00ECAA6B = {
+			isa = PBXGroup;
+			children = (
+				67B8177114FDA2ED00ECAA6B /* guitarHero */,
+				67B8176A14FDA2ED00ECAA6B /* Frameworks */,
+				67B8176814FDA2ED00ECAA6B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		67B8176814FDA2ED00ECAA6B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				67B8176714FDA2ED00ECAA6B /* guitarHero.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		67B8176A14FDA2ED00ECAA6B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				67B8176B14FDA2ED00ECAA6B /* Cocoa.framework */,
+				67B8176D14FDA2ED00ECAA6B /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		67B8176D14FDA2ED00ECAA6B /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				67B8176E14FDA2ED00ECAA6B /* AppKit.framework */,
+				67B8176F14FDA2ED00ECAA6B /* CoreData.framework */,
+				67B8177014FDA2ED00ECAA6B /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		67B8177114FDA2ED00ECAA6B /* guitarHero */ = {
+			isa = PBXGroup;
+			children = (
+				67B8177D14FDA2ED00ECAA6B /* guitarHeroAppDelegate.h */,
+				67B8177E14FDA2ED00ECAA6B /* guitarHeroAppDelegate.m */,
+				67B8178014FDA2ED00ECAA6B /* MainMenu.xib */,
+				67B8177214FDA2ED00ECAA6B /* Supporting Files */,
+			);
+			path = guitarHero;
+			sourceTree = "<group>";
+		};
+		67B8177214FDA2ED00ECAA6B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				67B8177314FDA2ED00ECAA6B /* guitarHero-Info.plist */,
+				67B8177414FDA2ED00ECAA6B /* InfoPlist.strings */,
+				67B8177714FDA2ED00ECAA6B /* main.m */,
+				67B8177914FDA2ED00ECAA6B /* guitarHero-Prefix.pch */,
+				67B8177A14FDA2ED00ECAA6B /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		67B8176614FDA2ED00ECAA6B /* guitarHero */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67B8178514FDA2ED00ECAA6B /* Build configuration list for PBXNativeTarget "guitarHero" */;
+			buildPhases = (
+				67B8176314FDA2ED00ECAA6B /* Sources */,
+				67B8176414FDA2ED00ECAA6B /* Frameworks */,
+				67B8176514FDA2ED00ECAA6B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = guitarHero;
+			productName = guitarHero;
+			productReference = 67B8176714FDA2ED00ECAA6B /* guitarHero.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		67B8175E14FDA2ED00ECAA6B /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 67B8176114FDA2ED00ECAA6B /* Build configuration list for PBXProject "guitarHero" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 67B8175C14FDA2ED00ECAA6B;
+			productRefGroup = 67B8176814FDA2ED00ECAA6B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				67B8176614FDA2ED00ECAA6B /* guitarHero */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		67B8176514FDA2ED00ECAA6B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67B8177614FDA2ED00ECAA6B /* InfoPlist.strings in Resources */,
+				67B8177C14FDA2ED00ECAA6B /* Credits.rtf in Resources */,
+				67B8178214FDA2ED00ECAA6B /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		67B8176314FDA2ED00ECAA6B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67B8177814FDA2ED00ECAA6B /* main.m in Sources */,
+				67B8177F14FDA2ED00ECAA6B /* guitarHeroAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		67B8177414FDA2ED00ECAA6B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				67B8177514FDA2ED00ECAA6B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		67B8177A14FDA2ED00ECAA6B /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				67B8177B14FDA2ED00ECAA6B /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		67B8178014FDA2ED00ECAA6B /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				67B8178114FDA2ED00ECAA6B /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		67B8178314FDA2ED00ECAA6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		67B8178414FDA2ED00ECAA6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		67B8178614FDA2ED00ECAA6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "guitarHero/guitarHero-Prefix.pch";
+				INFOPLIST_FILE = "guitarHero/guitarHero-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		67B8178714FDA2ED00ECAA6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "guitarHero/guitarHero-Prefix.pch";
+				INFOPLIST_FILE = "guitarHero/guitarHero-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		67B8176114FDA2ED00ECAA6B /* Build configuration list for PBXProject "guitarHero" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67B8178314FDA2ED00ECAA6B /* Debug */,
+				67B8178414FDA2ED00ECAA6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67B8178514FDA2ED00ECAA6B /* Build configuration list for PBXNativeTarget "guitarHero" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67B8178614FDA2ED00ECAA6B /* Debug */,
+				67B8178714FDA2ED00ECAA6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 67B8175E14FDA2ED00ECAA6B /* Project object */;
+}

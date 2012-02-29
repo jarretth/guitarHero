@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'guitarHero' target in the 'guitarHero' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
