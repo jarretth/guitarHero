@@ -2133,7 +2133,7 @@
 			</array>
 		</dict>
 		<string>IDEWorkspaceTabController_6DBCF102-19D8-4763-A562-1DE976E5CE3A</string>
-		<string>{{13, 65}, {1400, 806}}</string>
+		<string>{{25, 72}, {1400, 806}}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -3779,9 +3779,9 @@
 		<string>PrimaryDocumentVisibleCharacterRange</string>
 		<string>HideAllIssues</string>
 		<string>PrimaryDocumentSelectedCharacterRange</string>
-		<real>352181944.20211703</real>
-		<string>{1806, 1292}</string>
-		<string>{2274, 0}</string>
+		<real>352183725.34232098</real>
+		<string>{1828, 1566}</string>
+		<string>{2673, 0}</string>
 		<string>-audioCallback:buffer:</string>
 		<string>Xcode.IDEKit.EditorDocument.SourceCode</string>
 		<dict>
@@ -11153,9 +11153,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>352181871.59869897</real>
-		<string>{0, 792}</string>
-		<string>{274, 0}</string>
+		<real>352182887.69530702</real>
+		<string>{0, 637}</string>
+		<string>{294, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -11201,9 +11201,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>352181944.20089799</real>
-		<string>{1806, 1292}</string>
-		<string>{2274, 0}</string>
+		<real>352183725.34118098</real>
+		<string>{1828, 1566}</string>
+		<string>{2673, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -12606,7 +12606,7 @@
 				<integer>848</integer>
 			</dict>
 			<key>NS.time</key>
-			<real>352181917.99045199</real>
+			<real>352183704.66219902</real>
 		</dict>
 		<dict>
 			<key>$classes</key>
@@ -12617,7 +12617,7 @@
 			<key>$classname</key>
 			<string>NSDate</string>
 		</dict>
-		<string>Today at 11:18 PM</string>
+		<string>Today at 11:48 PM</string>
 		<integer>234</integer>
 		<dict>
 			<key>$class</key>

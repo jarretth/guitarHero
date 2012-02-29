@@ -11,6 +11,7 @@
 #import "soundCallback.h"
 
 #define buffer_count 5
+#define amplitude 15
 
 @interface guitarSoundObject : NSObject {
     AudioStreamBasicDescription dataFormat;

@@ -86,20 +86,28 @@
 -(void)audioCallback:(AudioQueueRef)inAQ buffer:(AudioQueueBufferRef)inBuffer
 {
     //NSLog(@"Callback.\n\tenabledNotes: %@\n\tscale%@",enabledNotes,scale);
+    float distortion = 1.0;
     for(int i = 0; i < 4000; i++)
     {
-        UInt16 total = 0;
+        float total = 0.0;
+        float div = 0.0;
         for(int j = 0; j < enabledNotes.count; j++)
         {
             NSNumber *num = (NSNumber*)[enabledNotes objectAtIndex:j];
             if(num.boolValue)
             {
+                div += 3.0;
                 NSNumber *freq = (NSNumber*)[scale objectAtIndex:j];
                 //if(i==0) NSLog(@"putting note for freq %f",freq.floatValue);
-                total += (15*sin(angleForFreq(freq.floatValue) * i));
+                total += sin(angleForFreq(freq.floatValue) * i);
+                total += sin(angleForFreq(3.0*freq.floatValue) * i);
+                total += sin(angleForFreq(5.0*freq.floatValue) * i);
             }
         }
-        ((UInt16*)inBuffer->mAudioData)[i] = (UInt16)total;
+        total = (total/div)*distortion;
+        if(total >= 1.0) total = 1.0;
+        if(total <= -1.0) total = -1.0;
+        ((UInt16*)inBuffer->mAudioData)[i] = (UInt16)(total*amplitude);
     }
     inBuffer->mAudioDataByteSize = 8000;
 	AudioQueueEnqueueBuffer(inAQ, inBuffer, 0, NULL);
