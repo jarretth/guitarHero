@@ -9,11 +9,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "guitarHero/guitarHeroAppDelegate.m"
-         timestampString = "352180714.944707"
+         timestampString = "352610004.892661"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "54"
-         endingLineNumber = "54"
+         startingLineNumber = "55"
+         endingLineNumber = "55"
          landmarkName = "-buttonPressed:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -23,11 +23,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "guitarHero/guitarSoundObject.m"
-         timestampString = "352179908.378348"
+         timestampString = "352691695.399607"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "49"
-         endingLineNumber = "49"
+         startingLineNumber = "50"
+         endingLineNumber = "50"
          landmarkName = "-startSound"
          landmarkType = "5">
       </FileBreakpoint>
@@ -37,11 +37,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "guitarHero/guitarSoundObject.h"
-         timestampString = "352182976.349029"
+         timestampString = "352691695.399607"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "34"
-         endingLineNumber = "34"
+         startingLineNumber = "36"
+         endingLineNumber = "36"
          landmarkName = "-audioCallback:buffer:"
          landmarkType = "4">
       </FileBreakpoint>
@@ -51,13 +51,41 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "guitarHero/guitarHeroAppDelegate.h"
-         timestampString = "352180012.602992"
+         timestampString = "352610004.892661"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "49"
-         endingLineNumber = "49"
-         landmarkName = "-enabledNotes"
-         landmarkType = "4">
+         startingLineNumber = "54"
+         endingLineNumber = "54"
+         landmarkName = "@interface guitarHeroAppDelegate"
+         landmarkType = "2">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "guitarHero/ghSerialReader.h"
+         timestampString = "352614431.759315"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "35"
+         endingLineNumber = "35"
+         landmarkName = "@interface ghSerialReader"
+         landmarkType = "2">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "guitarHero/guitarSoundObject.m"
+         timestampString = "352692029.899224"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "132"
+         endingLineNumber = "132"
+         landmarkName = "-distortion"
+         landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

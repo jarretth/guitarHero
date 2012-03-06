@@ -6,10 +6,13 @@
 //  Copyright 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
-#import "guitarSoundObject.h"
 
-@interface guitarHeroAppDelegate : NSObject <NSApplicationDelegate> {
+#import <Cocoa/Cocoa.h>
+#import "serialReaderDelegate.h"
+#import "guitarSoundObject.h"
+#import "ghSerialReader.h"
+
+@interface guitarHeroAppDelegate : NSObject <NSApplicationDelegate,serialReaderDelegate> {
     NSWindow *window;
     NSButton *greenButton;
     NSButton *redButton;
@@ -20,6 +23,7 @@
     NSSlider *volumeSlider;
     NSButton *muteButton;
     guitarSoundObject *gso;
+    ghSerialReader *ghs;
     
     float volume;
     int mute;
@@ -47,5 +51,6 @@
 - (void)updateView;
 +(NSArray *)noteToScale:(int) note;
 -(NSArray *)enabledNotes;
+
 
 @end

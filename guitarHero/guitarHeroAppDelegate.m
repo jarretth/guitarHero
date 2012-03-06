@@ -24,6 +24,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     gso = [[guitarSoundObject alloc] init];
+    ghs = [[ghSerialReader alloc] initWithFile:@"/dev/cu.usbmodemfd121" andHandler:self];
     mute = 1;
     volume = 1.0;
     scales[0] = 0; //A5 - 220Hz - 0
@@ -128,5 +129,37 @@
     NSArray *ret = [NSArray arrayWithObjects:(id*)&scale count:5];
     //NSLog(@"Got scale [%@] from note %d",ret,note);
     return ret;
+}
+
+-(void)strum:(NSArray *)notes
+{
+    NSLog(@"Strum: %@",notes);
+    for(int i = 0; i < [notes count]; i++)
+    {
+        NSNumber *n = [notes objectAtIndex:i];
+        notesOn[i] = [n intValue] ? true : false;
+    }
+    gso.enabledNotes = [self enabledNotes];
+    [self updateView];
+    [gso refreshSound];
+}
+
+-(void)noteRelease
+{
+    NSLog(@"Release");
+    for(int i = 0; i < 5; i++)
+    {
+        notesOn[i] = false;
+    }
+    gso.enabledNotes = [self enabledNotes];
+    [self updateView];
+    [gso refreshSound];
+}
+
+-(void)toggleDistortion
+{
+    NSLog(@"Distortion");
+    gso.distortion = !gso.distortion;
+    [gso refreshSound];
 }
 @end

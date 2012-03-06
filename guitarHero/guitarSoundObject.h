@@ -20,14 +20,16 @@
     
     NSArray *scale;
     NSArray *enabledNotes;
+    float distortion;
     
     int started;
 }
 
 @property (copy) NSArray *scale;
 @property (copy) NSArray *enabledNotes;
-
 -(void)setVolume:(float)volume;
+-(bool)distortion;
+-(void)setDistortion:(bool)distortion;
 -(void)refreshSound;
 -(void)startSound;
 -(void)stopSound;

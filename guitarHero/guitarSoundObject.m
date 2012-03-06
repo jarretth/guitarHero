@@ -41,6 +41,7 @@
         }
         self.scale = [NSArray array];
         self.enabledNotes = [NSArray array];
+        self.distortion = false;
     }
     
     return self;
@@ -86,7 +87,6 @@
 -(void)audioCallback:(AudioQueueRef)inAQ buffer:(AudioQueueBufferRef)inBuffer
 {
     //NSLog(@"Callback.\n\tenabledNotes: %@\n\tscale%@",enabledNotes,scale);
-    float distortion = 1.0;
     for(int i = 0; i < 4000; i++)
     {
         float total = 0.0;
@@ -112,6 +112,29 @@
     inBuffer->mAudioDataByteSize = 8000;
 	AudioQueueEnqueueBuffer(inAQ, inBuffer, 0, NULL);
     return;
+}
+
+-(void)dealloc
+{
+    [super dealloc];
+    AudioQueueStop(queue,true);
+    for(int i = 0; i < buffer_count; i++)
+    {
+        AudioQueueFreeBuffer(queue, buffers[i]);
+        buffers[i] = NULL;
+    }
+    AudioQueueDispose(queue, true);
+    queue = NULL;
+}
+
+-(bool)distortion
+{
+    return distortion > 1.1;
+}
+
+-(void)setDistortion:(bool)shouldDistort
+{
+    distortion = shouldDistort ? 100.0 : 1.0;
 }
 
 @end
