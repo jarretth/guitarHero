@@ -96,12 +96,17 @@
             NSNumber *num = (NSNumber*)[enabledNotes objectAtIndex:j];
             if(num.boolValue)
             {
-                div += 3.0;
+                div += 1.0;
+                float thisNote = 0.0;
                 NSNumber *freq = (NSNumber*)[scale objectAtIndex:j];
                 //if(i==0) NSLog(@"putting note for freq %f",freq.floatValue);
-                total += sin(angleForFreq(freq.floatValue) * i);
-                total += sin(angleForFreq(3.0*freq.floatValue) * i);
-                total += sin(angleForFreq(5.0*freq.floatValue) * i);
+                thisNote += 5.0 * sin(angleForFreq(freq.floatValue) * i);
+                thisNote += 4.0 * sin(angleForFreq(2.0*freq.floatValue) * i);
+                thisNote += 3.0 * sin(angleForFreq(3.0*freq.floatValue) * i);
+                thisNote += 2.0 * sin(angleForFreq(4.0*freq.floatValue) * i);
+                thisNote += 2.0 * sin(angleForFreq(5.0*freq.floatValue) * i);
+                thisNote += sin(angleForFreq(6.0*freq.floatValue) * i);
+                total += thisNote / 17.0;
             }
         }
         total = (total/div)*distortion;

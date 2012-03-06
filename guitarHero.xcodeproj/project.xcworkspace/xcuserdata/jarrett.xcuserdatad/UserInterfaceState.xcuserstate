@@ -1959,7 +1959,7 @@
 		</dict>
 		<string>IDEWorkspaceTabController_6DBCF102-19D8-4763-A562-1DE976E5CE3A</string>
 		<string>IDEWorkspaceWindowControllerUniqueIdentifier</string>
-		<string>{{25, 72}, {1400, 806}}</string>
+		<string>{{1765, 762}, {1400, 806}}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -2942,10 +2942,10 @@
 				</dict>
 			</array>
 		</dict>
-		<real>352692097.13118798</real>
-		<string>{0, 878}</string>
-		<string>{3636, 0}</string>
-		<string>-distortion</string>
+		<real>352767908.46497399</real>
+		<string>{2219, 1291}</string>
+		<string>{2842, 0}</string>
+		<string>-audioCallback:buffer:</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -7587,9 +7587,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>352692097.12996298</real>
-		<string>{0, 878}</string>
-		<string>{3636, 0}</string>
+		<real>352767908.46399897</real>
+		<string>{2219, 1291}</string>
+		<string>{2842, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -9173,7 +9173,7 @@
 				<integer>692</integer>
 			</dict>
 			<key>NS.time</key>
-			<real>352692029.76306999</real>
+			<real>352698509.90131497</real>
 		</dict>
 		<dict>
 			<key>$classes</key>
@@ -9184,7 +9184,7 @@
 			<key>$classname</key>
 			<string>NSDate</string>
 		</dict>
-		<string>Today at 9:00 PM</string>
+		<string>Yesterday at 10:48 PM</string>
 		<integer>234</integer>
 		<dict>
 			<key>$class</key>
