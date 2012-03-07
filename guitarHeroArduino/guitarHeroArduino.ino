@@ -57,12 +57,13 @@ void loop() {
                             frets[3] != newfrets[3] ||
                             frets[4] != newfrets[4]))
   {
-    if(tick < 50)
+    if(tick < 11)
     {
       tick++;
     }
     else
     {
+      tick = 0;
       sprintf(command, "HAMMER[%d,%d,%d,%d,%d]",newfrets[4]||newfrets[3]||newfrets[2]||newfrets[1] ? 0 : newfrets[0] 
                                               ,newfrets[4]||newfrets[3]||newfrets[2] ? 0 : newfrets[1]
                                               ,newfrets[4]||newfrets[3] ? 0 : newfrets[2]
