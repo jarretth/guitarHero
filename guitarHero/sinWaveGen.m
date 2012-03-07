@@ -55,7 +55,7 @@
     if(index == ceilf(8000/(frequency.floatValue)*720.0))
         index = 0;
     if(attack > 0) attack--;
-    return (1.2-(attack/ATTACK_DUR)*0.2)*(thisNote / (1.6+(attack/ATTACK_DUR)*14.1));
+    return (1.2-((ATTACK_DUR-attack)/ATTACK_DUR)*0.2)*(thisNote / (8.4+((attack)/ATTACK_DUR)*14.1));
 
 }
 

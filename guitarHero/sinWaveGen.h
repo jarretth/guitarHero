@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define ATTACK_DUR 8000
+#define ATTACK_DUR 1000
 
 @interface sinWaveGen : NSObject
 {

@@ -57,7 +57,7 @@ void loop() {
                             frets[3] != newfrets[3] ||
                             frets[4] != newfrets[4]))
   {
-    if(tick < 11)
+    if(tick < 6)
     {
       tick++;
     }
