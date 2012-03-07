@@ -10,6 +10,11 @@
 #include "soundCallback.h"
 
 @implementation guitarSoundObject
+{
+    bool refresh;
+    int attack;
+    bool hammer;
+}
 
 @synthesize scale,enabledNotes;
 
@@ -48,6 +53,9 @@
         {
             waves[i] = nil;
         }
+        attack=0;
+        refresh = false;
+        hammer = false;
     }
     
     return self;
@@ -84,6 +92,7 @@
 
 -(void)refreshSound
 {
+    refresh = true;
     /*if(started) {
         [self stopSound];
         [self startSound];
@@ -98,10 +107,17 @@
         NSNumber *num = (NSNumber*)[enabledNotes objectAtIndex:j];
         if(num.boolValue)
         {
-            if(waves[j] == nil)
+            if(waves[j] == nil || refresh == true)
             {
                 if(j < [scale count]) 
+                {
                     waves[j] = [[sinWaveGen alloc] initWithFrequency:(NSNumber*)[scale objectAtIndex:j]];
+                    if(!hammer)
+                    {
+                        [waves[j] attack];
+                        attack = ATTACK_DUR;
+                    }
+                }
             }
         }
         else
@@ -109,9 +125,11 @@
             waves[j] = nil;
         }
     }
+    refresh = hammer = false;
     for(int i = 0; i < 100; i++)
     {
         float total = 0.0;
+        float limit=1.0+1.5*(attack/ATTACK_DUR);
         float div = 1.0;
         for(int j = 0; j < 5; j++)
         {
@@ -125,9 +143,10 @@
             }
         }
         total = (total/div)*distortion;
-        if(total >= 1.0) total = 1.0;
-        if(total <= -1.0) total = -1.0;
-        ((UInt16*)inBuffer->mAudioData)[i] = (UInt16)(total*amplitude);
+        if(total >= limit) total = limit;
+        if(total <= -limit) total = -limit;
+        if(attack>0)attack--;
+        ((UInt16*)inBuffer->mAudioData)[i] = (UInt16)(total*(amplitude+5.0*(attack/ATTACK_DUR)));
     }
     inBuffer->mAudioDataByteSize = 200;
 	AudioQueueEnqueueBuffer(inAQ, inBuffer, 0, NULL);
@@ -155,6 +174,11 @@
 -(void)setDistortion:(bool)shouldDistort
 {
     distortion = shouldDistort ? 100.0 : 1.0;
+}
+
+-(void)hammer
+{
+    hammer = true;
 }
 
 @end

@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#define ATTACK_DUR 8000
+
 @interface sinWaveGen : NSObject
 {
     NSNumber *frequency;
@@ -17,6 +19,7 @@
 
 -(id)initWithFrequency:(NSNumber *)frequency;
 -(float)nextValue;
+-(void)attack;
 
 @end
 

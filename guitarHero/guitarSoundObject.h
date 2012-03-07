@@ -24,6 +24,7 @@
     sinWaveGen *waves[5];
     float distortion;
     
+    
     int started;
 }
 
@@ -36,4 +37,5 @@
 -(void)startSound;
 -(void)stopSound;
 -(void)audioCallback:(AudioQueueRef)inAQ buffer:(AudioQueueBufferRef)inBuffer;
+-(void)hammer;
 @end

@@ -84,7 +84,18 @@
     } else if([cmd scanString:@"DISTORTION" intoString:NULL] == YES)
     {
         [handler toggleDistortion];  
-    } else {
+    }else if([cmd scanString:@"HAMMER" intoString:NULL] == YES)
+    {
+        NSMutableArray *arr = [[NSMutableArray alloc] initWithCapacity:5];
+        [cmd setCharactersToBeSkipped:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]];
+        int i;
+        while([cmd scanInt:&i])
+        {
+            NSNumber *n = [NSNumber numberWithInt:i];
+            [arr addObject:n];
+        }
+        [handler hammerOn:[NSArray arrayWithArray:arr]];
+    }else {
         NSLog(@"Unknown command: %@", command);
     }
     return;

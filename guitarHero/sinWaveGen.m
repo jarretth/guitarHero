@@ -8,9 +8,12 @@
 
 #import "sinWaveGen.h"
 
+
 @implementation sinWaveGen
 {
     UInt64 index;
+    UInt64 zeroOne;
+    UInt64 attack;
 }
 
 @synthesize frequency;
@@ -20,6 +23,8 @@
     self = [super init];
     if (self) {
         index = 0;
+        zeroOne = UINT64_MAX;
+        attack = 0;
     }
     
     return self;
@@ -32,17 +37,25 @@
     return self;
 }
 
+-(void)attack
+{
+    attack = ATTACK_DUR;
+}
+
 -(float)nextValue
 {
     float thisNote = 0.0;
     index++;
-    thisNote += 5.0 * sin(angleForFreq(frequency.floatValue) * index);
-    thisNote += 4.0 * sin(angleForFreq(2.0*frequency.floatValue) * index);
-    thisNote += 3.0 * sin(angleForFreq(3.0*frequency.floatValue) * index);
-    thisNote += 2.0 * sin(angleForFreq(4.0*frequency.floatValue) * index);
-    thisNote += 2.0 * sin(angleForFreq(5.0*frequency.floatValue) * index);
-    thisNote += sin(angleForFreq(6.0*frequency.floatValue) * index);
-    return thisNote / 17.0;
+    thisNote += (2.9+(attack/ATTACK_DUR)*1.0) * sin(angleForFreq(frequency.floatValue) * index);
+    thisNote += (2.5+(attack/ATTACK_DUR)*2.0) * sin(angleForFreq(2.0*frequency.floatValue) * index);
+    thisNote += (1.5+(attack/ATTACK_DUR)*2.8) * sin(angleForFreq(3.0*frequency.floatValue) * index);
+    thisNote += (1.5+(attack/ATTACK_DUR)*2.5) * sin(angleForFreq(4.0*frequency.floatValue) * index);
+    thisNote += (0.0+(attack/ATTACK_DUR)*3.0) * sin(angleForFreq(5.0*frequency.floatValue) * index);
+    thisNote += (0.0+(attack/ATTACK_DUR)*2.8) * sin(angleForFreq(6.0*frequency.floatValue) * index);
+    if(index == ceilf(8000/(frequency.floatValue)*720.0))
+        index = 0;
+    if(attack > 0) attack--;
+    return (1.2-(attack/ATTACK_DUR)*0.2)*(thisNote / (1.6+(attack/ATTACK_DUR)*14.1));
 
 }
 

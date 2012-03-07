@@ -12,4 +12,5 @@
 -(void)strum:(NSArray*)notes;
 -(void)noteRelease;
 -(void)toggleDistortion;
+-(void)hammerOn:(NSArray*)notes;
 @end
