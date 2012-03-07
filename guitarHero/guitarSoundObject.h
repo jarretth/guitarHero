@@ -9,8 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <AudioToolbox/AudioToolbox.h>
 #import "soundCallback.h"
+#import "sinWaveGen.h"
 
-#define buffer_count 5
+#define buffer_count 3
 #define amplitude 15
 
 @interface guitarSoundObject : NSObject {
@@ -20,7 +21,9 @@
     
     NSArray *scale;
     NSArray *enabledNotes;
+    sinWaveGen *waves[5];
     float distortion;
+    
     
     int started;
 }
@@ -34,6 +37,5 @@
 -(void)startSound;
 -(void)stopSound;
 -(void)audioCallback:(AudioQueueRef)inAQ buffer:(AudioQueueBufferRef)inBuffer;
+-(void)hammer;
 @end
-
-double angleForFreq(double freq);

@@ -10,6 +10,11 @@
 #include "soundCallback.h"
 
 @implementation guitarSoundObject
+{
+    bool refresh;
+    int attack;
+    bool hammer;
+}
 
 @synthesize scale,enabledNotes;
 
@@ -39,9 +44,18 @@
             status = AudioQueueAllocateBuffer(queue,8000,&buffers[i]);
             if(status) { NSLog(@"Buffer[%d] creation failed!",i); return nil; }
         }
+        
         self.scale = [NSArray array];
         self.enabledNotes = [NSArray array];
         self.distortion = false;
+        
+        for(int i = 0; i < 5; i++)
+        {
+            waves[i] = nil;
+        }
+        attack=0;
+        refresh = false;
+        hammer = false;
     }
     
     return self;
@@ -78,43 +92,63 @@
 
 -(void)refreshSound
 {
-    if(started) {
+    refresh = true;
+    /*if(started) {
         [self stopSound];
         [self startSound];
-    }
+    }*/
 }
 
 -(void)audioCallback:(AudioQueueRef)inAQ buffer:(AudioQueueBufferRef)inBuffer
 {
     //NSLog(@"Callback.\n\tenabledNotes: %@\n\tscale%@",enabledNotes,scale);
-    for(int i = 0; i < 4000; i++)
+    for(int j = 0; j < enabledNotes.count; j++)
+    {
+        NSNumber *num = (NSNumber*)[enabledNotes objectAtIndex:j];
+        if(num.boolValue)
+        {
+            if(waves[j] == nil || refresh == true)
+            {
+                if(j < [scale count]) 
+                {
+                    waves[j] = [[sinWaveGen alloc] initWithFrequency:(NSNumber*)[scale objectAtIndex:j]];
+                    if(!hammer)
+                    {
+                        [waves[j] attack];
+                        attack = ATTACK_DUR;
+                    }
+                }
+            }
+        }
+        else
+        {
+            waves[j] = nil;
+        }
+    }
+    refresh = hammer = false;
+    for(int i = 0; i < 100; i++)
     {
         float total = 0.0;
-        float div = 0.0;
-        for(int j = 0; j < enabledNotes.count; j++)
+        float limit=1.0+1.5*(attack/ATTACK_DUR);
+        float div = 1.0;
+        for(int j = 0; j < 5; j++)
         {
-            NSNumber *num = (NSNumber*)[enabledNotes objectAtIndex:j];
-            if(num.boolValue)
+            if(waves[j] != nil)
             {
-                div += 1.0;
-                float thisNote = 0.0;
-                NSNumber *freq = (NSNumber*)[scale objectAtIndex:j];
-                //if(i==0) NSLog(@"putting note for freq %f",freq.floatValue);
-                thisNote += 5.0 * sin(angleForFreq(freq.floatValue) * i);
-                thisNote += 4.0 * sin(angleForFreq(2.0*freq.floatValue) * i);
-                thisNote += 3.0 * sin(angleForFreq(3.0*freq.floatValue) * i);
-                thisNote += 2.0 * sin(angleForFreq(4.0*freq.floatValue) * i);
-                thisNote += 2.0 * sin(angleForFreq(5.0*freq.floatValue) * i);
-                thisNote += sin(angleForFreq(6.0*freq.floatValue) * i);
-                total += thisNote / 17.0;
+                total += [waves[j] nextValue];
+                if((div - 1.0) < 0.000002)
+                    div += 1.0;
+                else
+                    div += 0.000001;
             }
         }
         total = (total/div)*distortion;
-        if(total >= 1.0) total = 1.0;
-        if(total <= -1.0) total = -1.0;
-        ((UInt16*)inBuffer->mAudioData)[i] = (UInt16)(total*amplitude);
+        if(total >= limit) total = limit;
+        if(total <= -limit) total = -limit;
+        if(attack>0)attack--;
+        ((UInt16*)inBuffer->mAudioData)[i] = (UInt16)(total*(amplitude+5.0*(attack/ATTACK_DUR)));
     }
-    inBuffer->mAudioDataByteSize = 8000;
+    inBuffer->mAudioDataByteSize = 200;
 	AudioQueueEnqueueBuffer(inAQ, inBuffer, 0, NULL);
     return;
 }
@@ -142,9 +176,10 @@
     distortion = shouldDistort ? 100.0 : 1.0;
 }
 
+-(void)hammer
+{
+    hammer = true;
+}
+
 @end
 
-double angleForFreq(double freq)
-{
-    return (M_PI * 2 * freq) / (8000 * 1.0);
-}

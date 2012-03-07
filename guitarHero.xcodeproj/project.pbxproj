@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		67218A8315045E0D003FCFBD /* ghSerialReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 67218A8215045E0C003FCFBD /* ghSerialReader.m */; };
+		67826F441506D0960047A06A /* sinWaveGen.m in Sources */ = {isa = PBXBuildFile; fileRef = 67826F431506D0960047A06A /* sinWaveGen.m */; };
 		67B8176C14FDA2ED00ECAA6B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B8176B14FDA2ED00ECAA6B /* Cocoa.framework */; };
 		67B8177614FDA2ED00ECAA6B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 67B8177414FDA2ED00ECAA6B /* InfoPlist.strings */; };
 		67B8177814FDA2ED00ECAA6B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B8177714FDA2ED00ECAA6B /* main.m */; };
@@ -23,6 +24,8 @@
 		67218A8115045E0C003FCFBD /* ghSerialReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ghSerialReader.h; sourceTree = "<group>"; };
 		67218A8215045E0C003FCFBD /* ghSerialReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ghSerialReader.m; sourceTree = "<group>"; };
 		67218A8515046176003FCFBD /* serialReaderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = serialReaderDelegate.h; sourceTree = "<group>"; };
+		67826F421506D0960047A06A /* sinWaveGen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sinWaveGen.h; sourceTree = "<group>"; };
+		67826F431506D0960047A06A /* sinWaveGen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sinWaveGen.m; sourceTree = "<group>"; };
 		67B8176714FDA2ED00ECAA6B /* guitarHero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = guitarHero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67B8176B14FDA2ED00ECAA6B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		67B8176E14FDA2ED00ECAA6B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -105,6 +108,8 @@
 				67B8177214FDA2ED00ECAA6B /* Supporting Files */,
 				67B8178D14FDBDFF00ECAA6B /* guitarSoundObject.h */,
 				67B8178E14FDBDFF00ECAA6B /* guitarSoundObject.m */,
+				67826F421506D0960047A06A /* sinWaveGen.h */,
+				67826F431506D0960047A06A /* sinWaveGen.m */,
 			);
 			path = guitarHero;
 			sourceTree = "<group>";
@@ -188,6 +193,7 @@
 				67B8178C14FDBD8100ECAA6B /* soundCallback.m in Sources */,
 				67B8178F14FDBDFF00ECAA6B /* guitarSoundObject.m in Sources */,
 				67218A8315045E0D003FCFBD /* ghSerialReader.m in Sources */,
+				67826F441506D0960047A06A /* sinWaveGen.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

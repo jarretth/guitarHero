@@ -52,7 +52,7 @@
     NSButton *input = (NSButton*)sender;
     notesOn[input.tag] = (int)input.state;
     gso.enabledNotes = [self enabledNotes];
-    [gso refreshSound];
+    //[gso refreshSound];
     [self updateView];
 }
 
@@ -133,7 +133,7 @@
 
 -(void)strum:(NSArray *)notes
 {
-    NSLog(@"Strum: %@",notes);
+    NSLog(@"Strum",notes);
     for(int i = 0; i < [notes count]; i++)
     {
         NSNumber *n = [notes objectAtIndex:i];
@@ -142,6 +142,20 @@
     gso.enabledNotes = [self enabledNotes];
     [self updateView];
     [gso refreshSound];
+}
+
+-(void)hammerOn:(NSArray *)notes
+{
+    NSLog(@"Hammer");
+    for(int i = 0; i < [notes count]; i++)
+    {
+        NSNumber *n = [notes objectAtIndex:i];
+        notesOn[i] = [n intValue] ? true : false;
+    }
+    gso.enabledNotes = [self enabledNotes];
+    [gso hammer];
+    [gso refreshSound];
+    [self updateView];
 }
 
 -(void)noteRelease
@@ -153,13 +167,13 @@
     }
     gso.enabledNotes = [self enabledNotes];
     [self updateView];
-    [gso refreshSound];
+//    [gso refreshSound];
 }
 
 -(void)toggleDistortion
 {
     NSLog(@"Distortion");
     gso.distortion = !gso.distortion;
-    [gso refreshSound];
+    //[gso refreshSound];
 }
 @end
